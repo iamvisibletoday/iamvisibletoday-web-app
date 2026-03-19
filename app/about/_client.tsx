@@ -192,16 +192,16 @@ export default function AboutPageClient() {
               </h2>
               <div className="space-y-6">
                 <p className="font-serif text-lg text-text-primary dark:text-dark-text-primary leading-relaxed">
-                  Right now, <strong>I Am Visible Today</strong> is built and curated by one person: an ordinary technologist who has been fortunate to be supported and helped by kind-hearted people in overcoming everyday struggles.
+                  Right now, <strong>I Am Visible Today</strong> is built and curated by ordinary technologists who have been fortunate to be supported and helped by kind-hearted people in overcoming everyday struggles.
                 </p>
                 <p className="font-serif text-lg text-text-primary dark:text-dark-text-primary leading-relaxed">
                   <i>
-                    &ldquo;That experience taught me that visibility and connection matter. I'm building this platform with a simple vision: to create a space where authenticity matters more than engagement, and where privacy is never traded for growth. I'm planning to grow this team with others who share these values.&rdquo;
+                    &ldquo;That experience taught us that visibility and connection matter. We are building this platform with a simple vision: to create a space where authenticity matters more than engagement, and where privacy is never traded for growth. We are planning to grow this team with others who share these values.&rdquo;
                   </i>
                 </p>
                 <p className="font-serif text-lg text-text-primary dark:text-dark-text-primary leading-relaxed">
                   <i>
-                    &ldquo;This project started as a belief: that visibility is healing, and that deserves a space built with care, not extraction. I'm committed to keeping that promise as we grow.&rdquo;
+                    &ldquo;This project started as a belief: that visibility is healing, and that deserves a space built with care, not extraction. We are committed to keeping that promise as we grow.&rdquo;
                   </i>
                 </p>
               </div>
