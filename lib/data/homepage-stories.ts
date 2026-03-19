@@ -1,5 +1,4 @@
-import { createServerClient } from '@supabase/ssr'
-import { cookies } from 'next/headers'
+import { createClient } from '@supabase/supabase-js'
 
 export interface HomeStory {
   id: string
@@ -13,26 +12,13 @@ export interface HomeStory {
 /**
  * Fetch featured stories for the homepage carousel and grid
  * Returns most recent published stories, excluding soft-deleted ones
+ * Uses public anon key (no auth needed for public stories)
  */
 export async function getHomepageStories(limit: number = 12) {
   try {
-    const cookieStore = await cookies()
-
-    const supabase = createServerClient(
+    const supabase = createClient(
       process.env.NEXT_PUBLIC_SUPABASE_URL!,
-      process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY!,
-      {
-        cookies: {
-          getAll() {
-            return cookieStore.getAll()
-          },
-          setAll(cookiesToSet) {
-            cookiesToSet.forEach(({ name, value, options }) => {
-              cookieStore.set(name, value, options)
-            })
-          },
-        },
-      }
+      process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY!
     )
 
     const { data, error } = await supabase
